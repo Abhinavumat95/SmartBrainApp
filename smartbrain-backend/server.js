@@ -14,7 +14,9 @@ const db = knex({
   connection: {
     //host: "postgresql-animate-47404", //localhost
     connectionString: process.env.DATABASE_URL,
-    ssl: true
+    ssl: {
+      rejectUnauthorized: false
+    }
   },
 });
 
